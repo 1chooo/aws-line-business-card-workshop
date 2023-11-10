@@ -11,6 +11,7 @@ from linebot.models import (
 import os
 import json
 
+
 line_bot_api = LineBotApi('YOUR_CHANNEL_ACCESS_TOKEN')
 handler = WebhookHandler('YOUR_CHANNEL_SECRET')
 
@@ -22,7 +23,7 @@ def lambda_handler(event, context):
             TextSendMessage(text=event.message.text))
 
     # get X-Line-Signature header value
-    signature = event['headers']['x-line-signature']
+    signature = event['headers']['X-Line-Signature']
 
     # get request body as text
     body = event['body']
