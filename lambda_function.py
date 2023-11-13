@@ -1,3 +1,10 @@
+# -*- coding: utf-8 -*-
+"""
+Date: 2023/11/14
+Author: @1chooo(Hugo ChunHo Lin)
+E-mail: hugo970217@gmail.com
+"""
+
 from linebot import (
     LineBotApi, WebhookHandler
 )
@@ -11,19 +18,28 @@ from linebot.models import (
 import os
 import json
 
-
-line_bot_api = LineBotApi('YOUR_CHANNEL_ACCESS_TOKEN')
-handler = WebhookHandler('YOUR_CHANNEL_SECRET')
+# line_bot_api = LineBotApi('YOUR_CHANNEL_ACCESS_TOKEN')
+# handler = WebhookHandler('YOUR_CHANNEL_SECRET')
 
 def lambda_handler(event, context):
     @handler.add(MessageEvent, message=TextMessage)
     def handle_message(event):
-        line_bot_api.reply_message(
-            event.reply_token,
-            TextSendMessage(text=event.message.text))
+
+        event_text = event.message.text
+
+        if event_text == "Hello":
+            line_bot_api.reply_message(
+                event.reply_token,
+                TextSendMessage(text="World")
+            )
+        else:
+            line_bot_api.reply_message(
+                event.reply_token,
+                TextSendMessage(text=event_text)
+            )
 
     # get X-Line-Signature header value
-    signature = event['headers']['X-Line-Signature']
+    signature = event['headers']['x-line-signature']
 
     # get request body as text
     body = event['body']
