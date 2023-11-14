@@ -3,6 +3,7 @@
 Date: 2023/11/14
 Author: @1chooo(Hugo ChunHo Lin)
 E-mail: hugo970217@gmail.com
+Version: v0.1.0
 """
 
 from linebot import LineBotApi
@@ -17,8 +18,8 @@ from linebot.models import ImageSendMessage
 import os
 import json
 
-# line_bot_api = LineBotApi('YOUR_CHANNEL_ACCESS_TOKEN')
-# handler = WebhookHandler('YOUR_CHANNEL_SECRET')
+line_bot_api = LineBotApi(os.environ['CHANNEL_ACCESS_TOKEN'])
+handler = WebhookHandler(os.environ['CHANNEL_SECRET'])
 
 def lambda_handler(event, context):
     @handler.add(MessageEvent, message=TextMessage)
@@ -57,19 +58,23 @@ def lambda_handler(event, context):
                 reply_messages
             )
         else:
+            reply_messages = [
+                TextSendMessage(
+                    text=f'{event_text}'
+                ),
+            ]
             line_bot_api.reply_message(
                 event.reply_token,
-                TextSendMessage(text=event_text)
+                reply_messages
             )
 
-    # get X-Line-Signature header value
-    signature = event['headers']['x-line-signature']
 
-    # get request body as text
-    body = event['body']
-
-    # handle webhook body
     try:
+        # get X-Line-Signature header value
+        signature = event['headers']['x-line-signature']
+
+        # get request body as text
+        body = event['body']
         handler.handle(body, signature)
     except InvalidSignatureError:
         return {
