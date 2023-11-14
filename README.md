@@ -1,12 +1,19 @@
 # AWS LINE Business Card
 
 ## Create `line-bot-sdk` Layer [^1]
+
 ```shell
-$ mkdir line-bot-sdk
-$ cd line-bot-sdk
-$ python3.10 -m pip install --target . line-bot-sdk
+$ mkdir python
+$ cd python
+$ pip install --target . line-bot-sdk 
 $ cd ..
 $ zip -r line-bot-sdk.zip ./python
+$ rm -rf ./python
+```
+
+### With shell script
+```shell
+$ ./build_line_bot_sdk_layer.sh
 ```
 
 ## CONTACT INFO.
