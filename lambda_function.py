@@ -5,15 +5,14 @@ Author: @1chooo(Hugo ChunHo Lin)
 E-mail: hugo970217@gmail.com
 """
 
-from linebot import (
-    LineBotApi, WebhookHandler
-)
-from linebot.exceptions import (
-    InvalidSignatureError
-)
-from linebot.models import (
-    MessageEvent, TextMessage, TextSendMessage,
-)
+from linebot import LineBotApi
+from linebot import WebhookHandler
+from linebot.exceptions import InvalidSignatureError
+from linebot.models import MessageEvent
+from linebot.models import TextMessage
+from linebot.models import ImageMessage
+from linebot.models import TextSendMessage
+from linebot.models import ImageSendMessage
 
 import os
 import json
@@ -23,14 +22,39 @@ import json
 
 def lambda_handler(event, context):
     @handler.add(MessageEvent, message=TextMessage)
-    def handle_message(event):
+    def handle_text_message(event):
 
         event_text = event.message.text
 
         if event_text == "Hello":
+
+            reply_messages = [
+                TextSendMessage(
+                    text=f'World'
+                ),
+            ]
+                
             line_bot_api.reply_message(
                 event.reply_token,
-                TextSendMessage(text="World")
+                reply_messages
+            )
+        elif event_text == "Image":
+            reply_messages = [
+                TextSendMessage(
+                    text=f'Test get image from s3 public bucket'
+                ),
+                TextSendMessage(
+                    text=f'This is Hugo!'
+                ),
+                ImageSendMessage(
+                    original_content_url = "https://2023-amazon-ambassador.s3.amazonaws.com/hugo_grad.png",
+                    preview_image_url = "https://2023-amazon-ambassador.s3.amazonaws.com/hugo_grad.png",
+                ),
+            ]
+                
+            line_bot_api.reply_message(
+                event.reply_token,
+                reply_messages
             )
         else:
             line_bot_api.reply_message(
