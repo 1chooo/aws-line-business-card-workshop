@@ -37,6 +37,5 @@ This software can be modified and reused without restriction.
 The original license must be included with any copies of this software.
 If a significant portion of the source code is used, please provide a link back to this repository.
 
-## Footnote
 [^1]: [使用 .zip 封存檔部署 Python Lambda 函數](https://docs.aws.amazon.com/zh_tw/lambda/latest/dg/python-package.html)
 
