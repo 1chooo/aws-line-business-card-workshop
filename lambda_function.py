@@ -6,17 +6,16 @@ E-mail: hugo970217@gmail.com
 Version: v0.1.0
 """
 
+import os
+import json
 from linebot import LineBotApi
 from linebot import WebhookHandler
-from linebot.exceptions import InvalidSignatureError
 from linebot.models import MessageEvent
 from linebot.models import TextMessage
 from linebot.models import ImageMessage
 from linebot.models import TextSendMessage
 from linebot.models import ImageSendMessage
-
-import os
-import json
+from linebot.exceptions import InvalidSignatureError
 
 line_bot_api = LineBotApi(os.environ['CHANNEL_ACCESS_TOKEN'])
 handler = WebhookHandler(os.environ['CHANNEL_SECRET'])
