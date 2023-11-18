@@ -33,7 +33,13 @@
 5. 公司的未來展望
 6. 製作 LINE BOT 的開發團隊
 
+並且可以下載此 Excel 模板 [replying_example.xlsx](./replying_example.xlsx) 來進行編輯，以儲存討論的成果。
+
 ### 設定加入好友訊息
+
+| 回覆 1 | 回覆 2 | 回覆 3 | 回覆 4 | 回覆 5 |
+|:-:|:-:|:-:|:-:|:-:|
+| Hi | HiHi | HiHiHi | HiHiHiHi | |
 
 ### 公司創辦的故事
 
