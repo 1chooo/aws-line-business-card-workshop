@@ -46,36 +46,199 @@
 
 | LINE BOT 關鍵字 | 回覆 1 | 回覆 2 | 回覆 3 | 回覆 4 | 回覆 5 |
 |:-:|:-:|:-:|:-:|:-:|:-:|
-| 我想知道 AWS 創辦故事 | 我想知道 AWS 創辦故事 1 | 我想知道 AWS 創辦故事 2 | 我想知道 AWS 創辦故事 3 | 我想知道 AWS 創辦故事 4 | |
+| 我想知道 AWS 創辦故事 | 我想知道 AWS 創辦故事 1 | 我想知道 AWS 創辦故事 2 | 我想知道 AWS 創辦故事 3 | 我想知道 AWS 創辦故事 4 | https://line-workshop-test.s3.amazonaws.com/01_story.png |
+
+```python
+elif event_text == "我想知道 AWS 創辦故事":
+            reply_messages = [
+                TextSendMessage(
+                    text=f'我想知道 AWS 創辦故事 1'
+                ),
+                TextSendMessage(
+                    text=f'我想知道 AWS 創辦故事 2'
+                ),
+                TextSendMessage(
+                    text=f'我想知道 AWS 創辦故事 3'
+                ),
+                TextSendMessage(
+                    text=f'我想知道 AWS 創辦故事 4'
+                ),
+                ImageSendMessage(
+                    original_content_url = "https://line-workshop-test.s3.amazonaws.com/01_story.png",
+                    preview_image_url = "https://line-workshop-test.s3.amazonaws.com/01_story.png",
+                ),
+            ]
+                
+            line_bot_api.reply_message(
+                event.reply_token,
+                reply_messages
+            )
+```
 
 ### 公司提供業務
 
 | LINE BOT 關鍵字 | 回覆 1 | 回覆 2 | 回覆 3 | 回覆 4 | 回覆 5 |
 |:-:|:-:|:-:|:-:|:-:|:-:|
-| 我想知道 AWS 提供的業務 | 我想知道 AWS 提供的業務 1 | 我想知道 AWS 提供的業務 2 | 我想知道 AWS 提供的業務 3 | 我想知道 AWS 提供的業務 4 | |
+| 我想知道 AWS 提供的業務 | 我想知道 AWS 提供的業務 1 | 我想知道 AWS 提供的業務 2 | 我想知道 AWS 提供的業務 3 | 我想知道 AWS 提供的業務 4 | https://line-workshop-test.s3.amazonaws.com/02_business.png |
+
+```python
+elif event_text == "我想知道 AWS 提供的業務":
+            reply_messages = [
+                TextSendMessage(
+                    text=f'我想知道 AWS 提供的業務 1'
+                ),
+                TextSendMessage(
+                    text=f'我想知道 AWS 提供的業務 2'
+                ),
+                TextSendMessage(
+                    text=f'我想知道 AWS 提供的業務 3'
+                ),
+                TextSendMessage(
+                    text=f'我想知道 AWS 提供的業務 4'
+                ),
+                ImageSendMessage(
+                    original_content_url = "https://line-workshop-test.s3.amazonaws.com/02_business.png",
+                    preview_image_url = "https://line-workshop-test.s3.amazonaws.com/02_business.png",
+                ),
+            ]
+                
+            line_bot_api.reply_message(
+                event.reply_token,
+                reply_messages
+            )
+```
+
 ### 公司的技術背景
 
 | LINE BOT 關鍵字 | 回覆 1 | 回覆 2 | 回覆 3 | 回覆 4 | 回覆 5 |
 |:-:|:-:|:-:|:-:|:-:|:-:|
-| 我想知道 AWS 技術背景 | 我想知道 AWS 技術背景 1 | 我想知道 AWS 技術背景 2 | 我想知道 AWS 技術背景 3 | 我想知道 AWS 技術背景 4 |  |
+| 我想知道 AWS 技術背景 | 我想知道 AWS 技術背景 1 | 我想知道 AWS 技術背景 2 | 我想知道 AWS 技術背景 3 | 我想知道 AWS 技術背景 4 | https://line-workshop-test.s3.amazonaws.com/03_tech.png |
+
+```python
+elif event_text == "我想知道 AWS 技術背景":
+            reply_messages = [
+                TextSendMessage(
+                    text=f'我想知道 AWS 技術背景 1'
+                ),
+                TextSendMessage(
+                    text=f'我想知道 AWS 技術背景 2'
+                ),
+                TextSendMessage(
+                    text=f'我想知道 AWS 技術背景 3'
+                ),
+                TextSendMessage(
+                    text=f'我想知道 AWS 技術背景 4'
+                ),
+                ImageSendMessage(
+                    original_content_url = "https://line-workshop-test.s3.amazonaws.com/03_tech.png",
+                    preview_image_url = "https://line-workshop-test.s3.amazonaws.com/03_tech.png",
+                ),
+            ]
+                
+            line_bot_api.reply_message(
+                event.reply_token,
+                reply_messages
+            )
+```
 
 ### 公司的宗旨
 
 | LINE BOT 關鍵字 | 回覆 1 | 回覆 2 | 回覆 3 | 回覆 4 | 回覆 5 |
 |:-:|:-:|:-:|:-:|:-:|:-:|
-| 我想知道 AWS 的領導力準則 | 我想知道 AWS 的領導力準則 1 | 我想知道 AWS 的領導力準則 2 | 我想知道 AWS 的領導力準則 3 | 我想知道 AWS 的領導力準則 4 |  |
+| 我想知道 AWS 的領導力準則 | 我想知道 AWS 的領導力準則 1 | 我想知道 AWS 的領導力準則 2 | 我想知道 AWS 的領導力準則 3 | 我想知道 AWS 的領導力準則 4 | https://line-workshop-test.s3.amazonaws.com/04_leadership.png |
+
+```python
+elif event_text == "我想知道 AWS 的領導力準則":
+            reply_messages = [
+                TextSendMessage(
+                    text=f'我想知道 AWS 的領導力準則 1'
+                ),
+                TextSendMessage(
+                    text=f'我想知道 AWS 的領導力準則 2'
+                ),
+                TextSendMessage(
+                    text=f'我想知道 AWS 的領導力準則 3'
+                ),
+                TextSendMessage(
+                    text=f'我想知道 AWS 的領導力準則 4'
+                ),
+                ImageSendMessage(
+                    original_content_url = "https://line-workshop-test.s3.amazonaws.com/04_leadership.png",
+                    preview_image_url = "https://line-workshop-test.s3.amazonaws.com/04_leadership.png",
+                ),
+            ]
+                
+            line_bot_api.reply_message(
+                event.reply_token,
+                reply_messages
+            )
+```
 
 ### 公司的未來展望
 
 | LINE BOT 關鍵字 | 回覆 1 | 回覆 2 | 回覆 3 | 回覆 4 | 回覆 5 |
 |:-:|:-:|:-:|:-:|:-:|:-:|
-| 我想知道 AWS 未來的發展方向 | 我想知道 AWS 未來的發展方向 1 | 我想知道 AWS 未來的發展方向 2 | 我想知道 AWS 未來的發展方向 3 | 我想知道 AWS 未來的發展方向 4 |  |
+| 我想知道 AWS 未來的發展方向 | 我想知道 AWS 未來的發展方向 1 | 我想知道 AWS 未來的發展方向 2 | 我想知道 AWS 未來的發展方向 3 | 我想知道 AWS 未來的發展方向 4 | https://line-workshop-test.s3.amazonaws.com/05_future.png |
+
+```python
+elif event_text == "我想知道 AWS 未來的發展方向":
+   reply_messages = [
+       TextSendMessage(
+           text=f'我想知道 AWS 未來的發展方向 1'
+       ),
+       TextSendMessage(
+           text=f'我想知道 AWS 未來的發展方向 2'
+       ),
+       TextSendMessage(
+           text=f'我想知道 AWS 未來的發展方向 3'
+       ),
+       TextSendMessage(
+           text=f'我想知道 AWS 未來的發展方向 4'
+       ),
+       ImageSendMessage(
+           original_content_url = "https://line-workshop-test.s3.amazonaws.com/05_future.png",
+           preview_image_url = "https://line-workshop-test.s3.amazonaws.com/05_future.png",
+       ),
+   ]
+       
+   line_bot_api.reply_message(
+       event.reply_token,
+       reply_messages
+   )
+```
 
 ### 製作 LINE BOT 的開發團隊
 
 | LINE BOT 關鍵字 | 回覆 1 | 回覆 2 | 回覆 3 | 回覆 4 | 回覆 5 |
 |:-:|:-:|:-:|:-:|:-:|:-:|
-| 我想了解 AWS LINE BOT 開發團隊 | 我想了解 AWS LINE BOT 開發團隊 1 | 我想了解 AWS LINE BOT 開發團隊 2 | 我想了解 AWS LINE BOT 開發團隊 3 | 我想了解 AWS LINE BOT 開發團隊 4 |  |
+| 我想了解 AWS LINE BOT 開發團隊 | 我想了解 AWS LINE BOT 開發團隊 1 | 我想了解 AWS LINE BOT 開發團隊 2 | 我想了解 AWS LINE BOT 開發團隊 3 | 我想了解 AWS LINE BOT 開發團隊 4 | https://line-workshop-test.s3.amazonaws.com/06_developing.png |
+
+```python
+elif event_text == "我想了解 AWS LINE BOT 開發團隊":
+   reply_messages = [
+       TextSendMessage(
+           text=f'我想了解 AWS LINE BOT 開發團隊 1'
+       ),
+       TextSendMessage(
+           text=f'我想了解 AWS LINE BOT 開發團隊 2'
+       ),
+       TextSendMessage(
+           text=f'我想了解 AWS LINE BOT 開發團隊 3'
+       ),
+       TextSendMessage(
+           text=f'我想了解 AWS LINE BOT 開發團隊 4'
+       ),
+       ImageSendMessage(
+           original_content_url = "https://line-workshop-test.s3.amazonaws.com/06_developing.png",
+           preview_image_url = "https://line-workshop-test.s3.amazonaws.com/06_developing.png",
+       ),
+   ]
+       
+   line_bot_api.reply_message(
+       event.reply_token,
+       reply_messages
+   )
+```
 
 ## 將 line bot 加入 AWS 雲服務
 ### Services
