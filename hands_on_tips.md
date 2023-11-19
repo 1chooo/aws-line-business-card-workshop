@@ -76,6 +76,88 @@
 |:-:|:-:|:-:|:-:|:-:|:-:|
 | 我想了解 AWS LINE BOT 開發團隊 | 我想了解 AWS LINE BOT 開發團隊 1 | 我想了解 AWS LINE BOT 開發團隊 2 | 我想了解 AWS LINE BOT 開發團隊 3 | 我想了解 AWS LINE BOT 開發團隊 4 |  |
 
+## 將 line bot 加入 AWS 雲服務
+### Services
+- [API Gateway](https://aws.amazon.com/tw/api-gateway/)：用來溝通Line和Lambda
+- [Lambda](https://aws.amazon.com/tw/lambda/)：用來傳送名片訊息
+- [S3](https://aws.amazon.com/tw/s3/)：用來儲存檔案 ex: image or txt
+
+### 架構
+- webhook：一種即時通知的機制，會在特定情況下觸發，呼叫一串叫做API的網址。在本次工作坊是Line Bot收到任何訊息的情況下，之後呼叫剛剛說的API。
+- API：是一個允許應用程式之間通訊的橋樑，負責傳送和回應訊息。在本次工作坊會由Webhook呼叫，並將Line收到的訊息傳送給Lambda處理。
+- Lambda：一個只用於執行程式的伺服器，會在事件發生時執行我們設定的函式Function。在本次工作坊的事件是API被呼叫的時候，會執行發送名片訊息的程式，回傳給LINE。
+
+### Create Lambda Function
+Enter Lambda Console:  
+1. Choose **[Functions](https://console.aws.amazon.com/lambda/home#/functions)**
+2. Click **Creates fcunction**
+3. Type **Function name** whatever you want
+4. Select **Python 3.9**
+5. Click Create function
+
+### Edit your Lambda Function
+After you create Lambda Function successfully, you need to paste you code.  
+1. Scroll down and paset your code in code source.
+2. Click **Test**
+3. Customize your **Event name**
+4. Click **Save**
+5. Click **Deploy**
+6. After successful deployment, click **Test**  
+You will see some errors because we lost some libraries.
+To inform Lambda about the required modules, we need to upload the .zip file to the layer.
+
+### Upload .zip to Layer
+1. Open **Menu**
+2. Click **Layers**
+3. Click **Create layer**
+4. Type **Name** and  **upload** [python.zip](https://raw.githubusercontent.com/1chooo/aws-line-business-card/main/python.zip) to layer
+   , Choose **x86_64**
+   , Select **Python 3.9**
+5. Click **Create**
+
+### Add Layer to your Function
+Back to your Lambda Function and scroll down to find the Layers
+1. Click **Add a layer** from Layers
+2. Select **Custom layers**
+3. Choose the layer you just created
+4. Click **Add**  
+After layer is added, you can try Test again, but it will pop new error.
+Because the lambda can't find the **Line Bot KEY**, so we need to add **Environment variables**
+
+### Add Environment variables
+1. **Configuration**
+2. **Environment variables**
+3. **Edit**
+4. Click **Add Environment variable** two times, and input **CHANNEL_ACCESS_TOKEN** and **CHANNEL_SECRET** seperately  
+Now, we need to go back to the [Line Developers console](https://developers.line.biz/console/) to obtain the these two KEY.
+Choose your Line Bot just created, and find the CHANNEL_ACCESS_TOKEN in **Messaging API** and CHANNEL_SECRET in **Basic settings**  
+5. Select **Messaging API** and scroll to the bottom. Issue the **Channel access token** and copy this to the **CHANNEL_ACCESS_TOKEN**
+6. Select **Basic settings** and scroll to the bottom. Copy **Your user ID** to the **CHANNEL_SECRET**
+7. Back to Lambda and **Save**  
+You can test again, but you will encounter another error. This is because the request is not originating from Line. When making requests to this program, we check whether the message is coming from Line to avoid malicious requests.
+So, now we need to use API Gateway to create an API that receives the correct requests from Line.
+
+### Create API
+Enter **[API Gateway](https://console.aws.amazon.com/apigateway)** Console:  
+1. Find the **REST API** and click **Build**
+2. Customize your **API name** and click **Create API**
+3. Click **Create method** in Methods
+4. Select Method type with **POST**
+5. Switch on the **Lambda proxy integration**
+6. Choose your **Lambda Function**
+7. **Create method**
+8. Click **Deploy API**
+9. Select **New stage** and type **prod** to stage name
+10. Deploy
+11. After API is deployed, copy the **Invoke URL**  
+This URL is the Webhook URL, so we need to paste it into the Line Bot settings.
+
+### Webhook Settings
+Go to Line Developers Console and choose your Line Bot's Messeging API  
+1. Scroll down to find the **Webhook settings**, and click **Edit** to paste the **Invoke URL**
+2. Switch on **Use webhook**
+3. Click **Verify** and check for **Success**
+
 ## CONTACT INFO.
 
 > AWS Educate Cloud Ambassador, Technical Support </br>
