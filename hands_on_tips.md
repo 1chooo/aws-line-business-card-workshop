@@ -110,7 +110,7 @@ To inform Lambda about the required modules, we need to upload the .zip file to 
 1. Open **Menu**
 2. Click **Layers**
 3. Click **Create layer**
-4. Type **Name** and  **upload** [python.zip](https://raw.githubusercontent.com/1chooo/aws-line-business-card/main/python.zip) to layer
+4. Type **Name** and  download the [line-bot-sdk.zip](https://raw.githubusercontent.com/1chooo/aws-line-business-card/main/line-bot-sdk.zip) to upload to layer
    , Choose **x86_64**
    , Select **Python 3.9**
 5. Click **Create**
@@ -132,7 +132,7 @@ Because the lambda can't find the **Line Bot KEY**, so we need to add **Environm
 Now, we need to go back to the [Line Developers console](https://developers.line.biz/console/) to obtain the these two KEY.
 Choose your Line Bot just created, and find the CHANNEL_ACCESS_TOKEN in **Messaging API** and CHANNEL_SECRET in **Basic settings**  
 5. Select **Messaging API** and scroll to the bottom. Issue the **Channel access token** and copy this to the **CHANNEL_ACCESS_TOKEN**
-6. Select **Basic settings** and scroll to the bottom. Copy **Your user ID** to the **CHANNEL_SECRET**
+6. Select **Basic settings** and scroll to the bottom. Copy **Channel secret** to the **CHANNEL_SECRET**
 7. Back to Lambda and **Save**  
 You can test again, but you will encounter another error. This is because the request is not originating from Line. When making requests to this program, we check whether the message is coming from Line to avoid malicious requests.
 So, now we need to use API Gateway to create an API that receives the correct requests from Line.
