@@ -38,6 +38,27 @@ def lambda_handler(event, context):
                 event.reply_token,
                 reply_messages
             )
+        elif event_text == "寶可夢是什麼？":
+            reply_messages = [
+                TextSendMessage(
+                    text=f'在一個充滿奇妙生物的世界裡，有著一種稀有而神秘的存在，那就是寶可夢。這些生物在人們的故事中被描述為可以在各種環境下被發現，有時候出現在草叢中、河邊，甚至是高高的山頂。人們說，能夠與寶可夢建立連結的訓練師，便能體驗到前所未有的奇妙旅程。'
+                ),
+                TextSendMessage(
+                    text=f'寶可夢不僅僅是各種不同形狀和能力的生物，更是一種象徵，象徵著冒險、友誼和夢想。這個充滿著奇妙生物的世界，永遠散發著光芒，等待著有心人的探索與發現。'
+                ),
+                TextSendMessage(
+                    text=f'親愛的訓練家，你準備好踏上旅程了嗎？'
+                ),
+                ImageSendMessage(
+                    original_content_url = "https://2023-amazon-ambassador.s3.amazonaws.com/hugo_grad.png",
+                    preview_image_url = "https://2023-amazon-ambassador.s3.amazonaws.com/hugo_grad.png",
+                ),
+            ]
+                
+            line_bot_api.reply_message(
+                event.reply_token,
+                reply_messages
+            )
         elif event_text == "我想知道 AWS 創辦故事":
             reply_messages = [
                 TextSendMessage(
