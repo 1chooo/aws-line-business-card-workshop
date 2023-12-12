@@ -149,8 +149,8 @@ def lambda_handler(event, context):
                     text=f'我會與你分享 AWS 的最新動態、技術見解，以及 AWS Educate 獨家的學習體驗，讓我們一同迎接科技的挑戰吧！🌟💡'
                 ),
                 ImageSendMessage(
-                    original_content_url = "https://line-workshop-test.s3.amazonaws.com/aws_educate.png",
-                    preview_image_url = "https://line-workshop-test.s3.amazonaws.com/aws_educate.png",
+                    original_content_url = "https://1225-line-workshop-demo-g0.s3.amazonaws.com/aws_educate.png",
+                    preview_image_url = "https://1225-line-workshop-demo-g0.s3.amazonaws.com/aws_educate.png",
                 ),
             ]
                 
