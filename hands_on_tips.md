@@ -382,6 +382,7 @@ Go to Line Developers Console and choose your Line Bot's Messeging API
 ## CONTACT INFO.
 
 > AWS Educate Cloud Ambassador, Technical Support </br>
+> 
 > **Hugo ChunHo Lin**
 > 
 > <aside>
@@ -390,6 +391,19 @@ Go to Line Developers Console and choose your Line Bot's Messeging API
 >   🧳 Linkedin: <a href="https://www.linkedin.com/in/1chooo/">Hugo ChunHo Lin</a>
 > <br>
 >   👨🏻‍💻 GitHub: <a href="https://github.com/1chooo">1chooo</a>
+>    
+> </aside>
+> 
+> <br>
+> 
+> **Richard**
+> 
+> <aside>
+>   📩 E-mail: <a href="mailto:Drahcir.lsc@gmail.com">Drahcir.lsc@gmail.com</a>
+> <br>
+>   🧳 Linkedin: <a href="https://www.linkedin.com/in/resultcheng/">Shao Cheng Lu</a>
+> <br>
+>   👨🏻‍💻 GitHub: <a href="https://github.com/IdONTKnowCHEK">IdONTKnowCHEK</a>
 >    
 > </aside>
 
