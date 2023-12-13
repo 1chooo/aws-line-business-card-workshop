@@ -2,9 +2,35 @@
 
 為公司打造公關形象，打造 line bot 推播公司的資訊。
 
-## Table of Contents
-1. 挑選品牌
-2. 透過以下主題介紹公司
+**Table of Contents**
+- [2023/12/08 AWS LINE Business Card Workshop Hands-On Tips](#20231208-aws-line-business-card-workshop-hands-on-tips)
+  - [LINE BOT 建立](#line-bot-建立)
+    - [挑選品牌](#挑選品牌)
+      - [☁️ 以下將會以 `AWS` 為例子 ☁️](#️-以下將會以-aws-為例子-️)
+    - [透過以下主題介紹公司](#透過以下主題介紹公司)
+      - [設定加入好友訊息](#設定加入好友訊息)
+      - [公司創辦的故事](#公司創辦的故事)
+      - [公司提供業務](#公司提供業務)
+      - [公司的技術背景](#公司的技術背景)
+      - [公司的宗旨](#公司的宗旨)
+      - [公司的未來展望](#公司的未來展望)
+      - [製作 LINE BOT 的開發團隊](#製作-line-bot-的開發團隊)
+    - [將回覆照片上傳至 AWS s3](#將回覆照片上傳至-aws-s3)
+  - [將 line bot 加入 AWS 雲服務](#將-line-bot-加入-aws-雲服務)
+    - [Services](#services)
+    - [架構](#架構)
+    - [Create Lambda Function](#create-lambda-function)
+    - [Edit your Lambda Function](#edit-your-lambda-function)
+    - [Upload .zip to Layer](#upload-zip-to-layer)
+    - [Add Layer to your Function](#add-layer-to-your-function)
+    - [Add Environment variables](#add-environment-variables)
+    - [Create API](#create-api)
+    - [Webhook Settings](#webhook-settings)
+  - [CONTACT INFO.](#contact-info)
+  - [License](#license)
+
+
+<!-- - 透過以下主題介紹公司
    - [ ] 設定加入好友訊息
    - [ ] 公司創辦的故事
    - [ ] 公司提供業務
@@ -12,10 +38,11 @@
    - [ ] 公司的宗旨
    - [ ] 公司的未來展望
    - [ ] 製作 LINE BOT 的開發團隊
-3. 建立 line bot
-4. 將 line bot 加入 AWS 雲服務
+- 建立 line bot
+- 將 line bot 加入 AWS 雲服務 -->
 
-## 挑選品牌
+## LINE BOT 建立
+### 挑選品牌
 請透過以下與 AWS 有關的品牌，挑選一個你喜歡的品牌，並且會是今天主要推播的品牌。（又或是還有其他興趣並且同樣有使用 AWS 服務的品牌）
 
 
@@ -23,7 +50,7 @@
 
 #### ☁️ 以下將會以 `AWS` 為例子 ☁️
 
-## 透過以下主題介紹公司
+### 透過以下主題介紹公司
 
 可以透過以下主題來讓使用者了解公司的資訊，並且可以適時地透過照片的輔助來讓使用者更加了解公司的資訊。
 
@@ -34,15 +61,17 @@
 5. 公司的未來展望
 6. 製作 LINE BOT 的開發團隊
 
-並且可以下載此 Excel 模板 [replying_example.xlsx](./replying_example.xlsx) 來進行編輯，以儲存討論的成果。
+- 可以下載此 Excel 模板 [replying_example.xlsx](./replying_example.xlsx) 來進行編輯，以儲存討論的成果。
+- 又或是可以點選以下 [replying_example.xlsx](https://docs.google.com/spreadsheets/d/1QWzJG-QpXdV8y-NSwr-XMEkWmj2djWs0/edit?usp=sharing&ouid=108338307585092515246&rtpof=true&sd=true)，直接進行共同編輯，注意請切換到自己的組別頁面。
 
-### 設定加入好友訊息
+
+#### 設定加入好友訊息
 
 | 回覆 1 | 回覆 2 | 回覆 3 | 回覆 4 | 回覆 5 |
 |:-:|:-:|:-:|:-:|:-:|
-| Hi | HiHi | HiHiHi | HiHiHiHi | |
+| 嗨！ {Nickname}您好！👋 我們是第五屆 AWS Educate 校園大使 | {AccountName} 是你的 AWS 小幫手，將帶你探索 Amazon Web Services 的無限可能。 | 將陪你一同踏上雲端運算的冒險之旅。AWS 提供豐富多元的雲端服務，從運算到儲存，應有盡有。 | 我會與你分享 AWS 的最新動態、技術見解，以及 AWS Educate 獨家的學習體驗，讓我們一同迎接科技的挑戰吧！🌟💡 | ![](https://line-workshop-test.s3.amazonaws.com/aws_educate.png) |
 
-### 公司創辦的故事
+#### 公司創辦的故事
 
 | LINE BOT 關鍵字 | 回覆 1 | 回覆 2 | 回覆 3 | 回覆 4 | 回覆 5 |
 |:-:|:-:|:-:|:-:|:-:|:-:|
@@ -75,7 +104,7 @@ elif event_text == "你們的關鍵字":
     )
 ```
 
-### 公司提供業務
+#### 公司提供業務
 
 | LINE BOT 關鍵字 | 回覆 1 | 回覆 2 | 回覆 3 | 回覆 4 | 回覆 5 |
 |:-:|:-:|:-:|:-:|:-:|:-:|
@@ -108,7 +137,7 @@ elif event_text == "我想知道 AWS 提供的業務":
     )
 ```
 
-### 公司的技術背景
+#### 公司的技術背景
 
 | LINE BOT 關鍵字 | 回覆 1 | 回覆 2 | 回覆 3 | 回覆 4 | 回覆 5 |
 |:-:|:-:|:-:|:-:|:-:|:-:|
@@ -141,7 +170,7 @@ elif event_text == "我想知道 AWS 技術背景":
     )
 ```
 
-### 公司的宗旨
+#### 公司的宗旨
 
 | LINE BOT 關鍵字 | 回覆 1 | 回覆 2 | 回覆 3 | 回覆 4 | 回覆 5 |
 |:-:|:-:|:-:|:-:|:-:|:-:|
@@ -174,7 +203,7 @@ elif event_text == "我想知道 AWS 的領導力準則":
     )
 ```
 
-### 公司的未來展望
+#### 公司的未來展望
 
 | LINE BOT 關鍵字 | 回覆 1 | 回覆 2 | 回覆 3 | 回覆 4 | 回覆 5 |
 |:-:|:-:|:-:|:-:|:-:|:-:|
@@ -207,7 +236,7 @@ elif event_text == "我想知道 AWS 未來的發展方向":
     )
 ```
 
-### 製作 LINE BOT 的開發團隊
+#### 製作 LINE BOT 的開發團隊
 
 | LINE BOT 關鍵字 | 回覆 1 | 回覆 2 | 回覆 3 | 回覆 4 | 回覆 5 |
 |:-:|:-:|:-:|:-:|:-:|:-:|
@@ -239,6 +268,12 @@ elif event_text == "我想了解 AWS LINE BOT 開發團隊":
         reply_messages
     )
 ```
+
+### 將回覆照片上傳至 AWS s3
+
+| | |
+|:-:|:-:|
+
 
 ## 將 line bot 加入 AWS 雲服務
 ### Services
