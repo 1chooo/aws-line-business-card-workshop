@@ -242,6 +242,8 @@ elif event_text == "我想知道 AWS 未來的發展方向":
 |:-:|:-:|:-:|:-:|:-:|:-:|
 | 我想了解 AWS LINE BOT 開發團隊 | 嗨！👋 \n我們是第五屆 AWS Educate 校園大使 | 我是你的 AWS 小幫手，將帶你探索 Amazon Web Services 的無限可能。 | 將陪你一同踏上雲端運算的冒險之旅。AWS 提供豐富多元的雲端服務，從運算到儲存，應有盡有。 | 我會與你分享 AWS 的最新動態、技術見解，以及 AWS Educate 獨家的學習體驗，讓我們一同迎接科技的挑戰吧！🌟💡 | ![](https://line-workshop-test.s3.amazonaws.com/aws_educate.png) |
 
+![](./imgs/s3_permission.png)
+
 ```python
 elif event_text == "我想了解 AWS LINE BOT 開發團隊":
     reply_messages = [
@@ -271,8 +273,28 @@ elif event_text == "我想了解 AWS LINE BOT 開發團隊":
 
 ### 將回覆照片上傳至 AWS s3
 
-| | |
-|:-:|:-:|
+取消所有權限以讓所有人都可以讀取，並且將以下內容貼到 Bucket Policy 中。
+
+![](./imgs/s3_privacy.png)
+
+```js
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "PublicReadGetObject",
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": [
+                "s3:GetObject"
+            ],
+            "Resource": [
+                "arn:aws:s3:::your_bucket_name/*"   // Change into your bucket name
+            ]
+        }
+    ]
+}
+```
 
 
 ## 將 line bot 加入 AWS 雲服務
@@ -360,6 +382,7 @@ Go to Line Developers Console and choose your Line Bot's Messeging API
 ## CONTACT INFO.
 
 > AWS Educate Cloud Ambassador, Technical Support </br>
+> 
 > **Hugo ChunHo Lin**
 > 
 > <aside>
@@ -368,6 +391,19 @@ Go to Line Developers Console and choose your Line Bot's Messeging API
 >   🧳 Linkedin: <a href="https://www.linkedin.com/in/1chooo/">Hugo ChunHo Lin</a>
 > <br>
 >   👨🏻‍💻 GitHub: <a href="https://github.com/1chooo">1chooo</a>
+>    
+> </aside>
+> 
+> <br>
+> 
+> **Richard**
+> 
+> <aside>
+>   📩 E-mail: <a href="mailto:Drahcir.lsc@gmail.com">Drahcir.lsc@gmail.com</a>
+> <br>
+>   🧳 Linkedin: <a href="https://www.linkedin.com/in/resultcheng/">Shao Cheng Lu</a>
+> <br>
+>   👨🏻‍💻 GitHub: <a href="https://github.com/IdONTKnowCHEK">IdONTKnowCHEK</a>
 >    
 > </aside>
 
