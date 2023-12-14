@@ -42,6 +42,7 @@ $ ./build_line_bot_sdk_layer.sh
 ## CONTACT INFO.
 
 > AWS Educate Cloud Ambassador, Technical Support </br>
+> 
 > **Hugo ChunHo Lin**
 > 
 > <aside>
@@ -50,6 +51,19 @@ $ ./build_line_bot_sdk_layer.sh
 >   🧳 Linkedin: <a href="https://www.linkedin.com/in/1chooo/">Hugo ChunHo Lin</a>
 > <br>
 >   👨🏻‍💻 GitHub: <a href="https://github.com/1chooo">1chooo</a>
+>    
+> </aside>
+> 
+> <br>
+> 
+> **Richard**
+> 
+> <aside>
+>   📩 E-mail: <a href="mailto:Drahcir.lsc@gmail.com">Drahcir.lsc@gmail.com</a>
+> <br>
+>   🧳 Linkedin: <a href="https://www.linkedin.com/in/resultcheng/">Shao Cheng Lu</a>
+> <br>
+>   👨🏻‍💻 GitHub: <a href="https://github.com/IdONTKnowCHEK">IdONTKnowCHEK</a>
 >    
 > </aside>
 
