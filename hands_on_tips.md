@@ -4,7 +4,7 @@
 
 | Post | Post | LINE QRCODE |
 |:-:|:-:|:-:|
-| ![](imgs/post/01_post.gif) | ![](imgs/post/02_post.jpg) | ![](./imgs/line_qrcode/L_gainfriends_2dbarcodes_BW.png)
+| <img src="imgs/post/01_post.gif" width="300"> | <img src="imgs/post/02_post.jpg" width="300"> | <img src="./imgs/line_qrcode/L_gainfriends_2dbarcodes_BW.png" width="300"> |
 
 
 
