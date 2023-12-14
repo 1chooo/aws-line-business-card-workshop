@@ -1,9 +1,12 @@
-# 2023/12/08 AWS LINE Business Card Workshop Hands-On Tips
+# 2023/12/15 AWS LINE Business Card Workshop Hands-On Tips
 
-為公司打造公關形象，打造 line bot 推播公司的資訊。
+12/15 AWS x LINE BOT 雲端探險計畫 ☁︎
+
+
+![](imgs/post/01_post.gif)
 
 **Table of Contents**
-- [2023/12/08 AWS LINE Business Card Workshop Hands-On Tips](#20231208-aws-line-business-card-workshop-hands-on-tips)
+- [2023/12/15 AWS LINE Business Card Workshop Hands-On Tips](#20231215-aws-line-business-card-workshop-hands-on-tips)
   - [LINE BOT 建立](#line-bot-建立)
     - [挑選品牌](#挑選品牌)
       - [☁️ 以下將會以 `AWS` 為例子 ☁️](#️-以下將會以-aws-為例子-️)
