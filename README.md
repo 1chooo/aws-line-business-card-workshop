@@ -1,6 +1,6 @@
 # AWS LINE Business Card
 
-![](imgs/post/01_post.gif)
+[![](imgs/post/01_post.gif)](https://www.instagram.com/p/C0T-Cu7rpKP/?img_index=1)
 
 ## Create `line-bot-sdk` Layer [^1]
 

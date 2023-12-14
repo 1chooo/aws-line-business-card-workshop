@@ -2,8 +2,11 @@
 
 12/15 AWS x LINE BOT 雲端探險計畫 ☁︎
 
+| Post | Post | LINE QRCODE |
+|:-:|:-:|:-:|
+| ![](imgs/post/01_post.gif) | ![](imgs/post/02_post.jpg) | ![](./imgs/line_qrcode/L_gainfriends_2dbarcodes_BW.png)
 
-![](imgs/post/01_post.gif)
+
 
 **Table of Contents**
 - [2023/12/15 AWS LINE Business Card Workshop Hands-On Tips](#20231215-aws-line-business-card-workshop-hands-on-tips)
@@ -32,17 +35,6 @@
   - [CONTACT INFO.](#contact-info)
   - [License](#license)
 
-
-<!-- - 透過以下主題介紹公司
-   - [ ] 設定加入好友訊息
-   - [ ] 公司創辦的故事
-   - [ ] 公司提供業務
-   - [ ] 公司的技術背景
-   - [ ] 公司的宗旨
-   - [ ] 公司的未來展望
-   - [ ] 製作 LINE BOT 的開發團隊
-- 建立 line bot
-- 將 line bot 加入 AWS 雲服務 -->
 
 ## LINE BOT 建立
 ### 挑選品牌
