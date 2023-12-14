@@ -1,6 +1,8 @@
 # AWS LINE Business Card
 
-[![](imgs/post/01_post.gif)](https://www.instagram.com/p/C0T-Cu7rpKP/?img_index=1)
+| Post | Post | LINE QRCODE |
+|:-:|:-:|:-:|
+| <img src="imgs/post/01_post.gif" width="300"> | <img src="imgs/post/02_post.jpg" width="300"> | <img src="./imgs/line_qrcode/L_gainfriends_2dbarcodes_BW.png" width="300"> |
 
 ## Create `line-bot-sdk` Layer [^1]
 

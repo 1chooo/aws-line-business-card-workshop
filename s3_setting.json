@@ -9,7 +9,7 @@
                 "s3:GetObject"
             ],
             "Resource": [
-                "arn:aws:s3:::your_bucket_name/*"
+                "arn:aws:s3:::your_bucket_name/*"   // Change into your bucket name
             ]
         }
     ]
