@@ -313,7 +313,7 @@ Enter Lambda Console:
 
 ### Edit your Lambda Function
 After you create Lambda Function successfully, you need to paste you code.  
-1. Scroll down and paset your code in code source.
+1. Scroll down and paste [`lambda_function.py`](https://github.com/1chooo/aws-line-business-card/blob/main/lambda_function.py) in code source.
 2. Click **Test**
 3. Customize your **Event name**
 4. Click **Save**
