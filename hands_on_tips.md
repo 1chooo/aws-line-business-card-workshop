@@ -1,7 +1,9 @@
 # 2023/12/15 AWS LINE Business Card Workshop Hands-On Tips
 
 12/15 AWS x LINE BOT 雲端探險計畫 ☁︎  
-[本次活動PPT](https://niuo365-my.sharepoint.com/:p:/g/personal/b0943005_365_niu_edu_tw/EYy4Udd48MxAvmK1zIH7aDUB_aA6oy28MP-4K8v3r0SMEQ?e=Zqd7S6)
+
+> [!Note]
+> [👉🏻 本次活動PPT](https://niuo365-my.sharepoint.com/:p:/g/personal/b0943005_365_niu_edu_tw/EYy4Udd48MxAvmK1zIH7aDUB_aA6oy28MP-4K8v3r0SMEQ?e=Zqd7S6)
 
 | Post | Post | LINE QRCODE |
 |:-:|:-:|:-:|
